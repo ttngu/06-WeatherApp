@@ -18,34 +18,38 @@
 
     <!-- Create main container -->
     <div class="container">
-        
-        <!-- Create search card -->
-        <div class="card">
-            <div class="card-body">
-              <h4>Search for a City:</h4>
-              <!-- Search Input and Button -->
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        <div class="row">
+            <!-- Create search card -->
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                    <h4>Search for a City:</h4>
+                    <!-- Search Input and Button -->
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-              </div>
-                
             </div>
-          </div>
-        <!-- Create card for city output -->
-        <div class="card">
-            <div class="card-body">
-              <h4>City Weather Stuff</h4><hr>
+            <!-- Create card for city output -->
+            <div class="col-sm-9">
+                <div class="card">
+                    <div class="card-body">
+                    <h4>City Weather Stuff</h4><hr>
+                    </div>
+                </div>
+                <!-- Create card for 5 day forecast -->
+                <div class="card">
+                    <div class="card-body">
+                    <h4>Day Forecast</h4> <hr>
+                    </div>
+                </div>
             </div>
-          </div>
-        <!-- Create card for 5 day forecast -->
-        <div class="card">
-            <div class="card-body">
-              <h4>Day Forecast</h4> <hr>
-            </div>
-          </div>
-
+        </div>
     </div>
 <!-- JS Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
