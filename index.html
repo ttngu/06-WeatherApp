@@ -19,7 +19,7 @@
 <body>
     <!-- Create Nav Bar -->
     <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h">Weather Dashboard</span>
+        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
       </nav>
 
     <!-- Create main container -->
@@ -34,14 +34,18 @@
                     <h4>Search for a City:</h4>
                         <!-- Search Input and Button -->
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="City" aria-label="City Search" aria-describedby="button-addon2">
+                            <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name" aria-describedby="button-addon2">
                             <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-outline-secondary" type="button" id="search-button">
+                                    <i class="fas fa-search"></i>
+                                </button>
                             </div>
                         </div>
                         <!-- Div to hold 'Recent Searches' -->
                         <div class="recent-searches">
                             <p>Recent Searches:</p>
+                            <button class="btn btn-outline-secondary" type="button" id="clear-history">Clear History</button>
+                            <form id="history"></form>
                         </div>
                     </div>
                 </div>
@@ -51,13 +55,45 @@
             <!-- Create card for city output -->
                 <div class="card">
                     <div class="card-body">
-                    <h4>City Weather Stuff</h4><hr>
+                        <h4>City Weather Stuff</h4><hr>
+                        <span id="city-name" class="city-name align-middle"></span>
+                        <img id="current-pic" src="#" alt="">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="wind-speed"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <p id="UV-index"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+         
                 <!-- Create card for 5 day forecast -->
                 <div class="card">
                     <div class="card-body">
-                    <h4>Day Forecast</h4> <hr>
+                        <h4>5 Day Forecast</h4> <hr>
+                        <div class="row">
+                            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,7 +104,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!-- Link to JS -->
-<script src="/style.css"></script>
+<script src="/script.js"></script>
 
 </body>
 </html>

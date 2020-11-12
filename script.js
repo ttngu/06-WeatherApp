@@ -3,20 +3,31 @@ var APIKey = "104f10c4aa9b29656ab75accd63edf29";
 
 
 // Create function - on click for city name search
-function getWeather(cityName) {
+// function getWeather(cityName) {
     
     // URL to query the Open Weather database, adding our cityName and API Key
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+    // var queryURL = "api.openweathermap.org/data/2.5/forecast?id=" + cityName + "&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+      "q=Bujumbura,Burundi&appid=" + APIKey;
 
     // AJAX call
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
-        console.log(response);
+
+        // store all of the retrieved data inside of an object called "response"
+        }).then(function(response) {
+
+            // Log the queryURL
+            console.log(queryURL);
+
+            // Log the resulting object
+            console.log(response);
     })
     
-}
+// }
+
+
     // Present CURRENT and future conidtions
         // city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index 
 
